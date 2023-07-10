@@ -16,7 +16,7 @@ export default function soccerTable() {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <div>
         <h1 className="flex font-black text-5xl justify-center p-8">
           Tabela Brasileirão

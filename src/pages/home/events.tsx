@@ -2,7 +2,7 @@ import { Images } from '@/components/Images'
 import { Links } from '@/components/Links'
 export default function Events() {
     return (
-    <div className='h-screen'>
+    <div className='h-screen flex flex-col justify-center items-center'>
             <header className='flex items-center justify-center mt-20 w-full h-12 mx-auto text-2xl font-black text-gray-200 uppercase'>
                 Images com estado
             </header>

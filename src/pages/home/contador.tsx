@@ -3,7 +3,7 @@ import Counter from "@/components/contador/Counter";
 
 export default function Contador() {
     return(
-        <>
+        <div className="flex items-center justify-center flex-col">
             <header className='flex items-center justify-center mt-20 w-full h-12 mx-auto text-2xl font-black text-gray-200 uppercase'>
                 Contador
             </header>
@@ -18,7 +18,7 @@ export default function Contador() {
             <div>
                 <Links />
             </div>
-        </>
+        </div>
 
 
     )

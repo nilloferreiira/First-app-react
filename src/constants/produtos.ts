@@ -20,6 +20,22 @@ const produtos: Produtos[] = [
     preco: 1000,
     imagem: "https://source.unsplash.com/featured/300x300/?monitor",
   },
+
+  {
+    id: 4,
+    nome: "Teclado",
+    preco: 1000,
+    imagem: "https://source.unsplash.com/featured/300x300/?teclado",
+  },
+  
+  {
+    id: 5,
+    nome: "Headphones",
+    preco: 1000,
+    imagem: "https://source.unsplash.com/featured/300x300/?headphones",
+  },
+
+
 ];
 
 export default produtos;
