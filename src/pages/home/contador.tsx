@@ -1,5 +1,6 @@
 import { Links } from "@/components/Links";
 import Counter from "@/components/contador/Counter";
+import { CounterProvider } from "@/data/context/CounterContext";
 
 export default function Contador() {
     return(
@@ -10,9 +11,9 @@ export default function Contador() {
 
 
             <div className="flex items-center justify-center gap-5 mt-40">
+                
                 <Counter />
-                <Counter />
-                <Counter />
+            
             </div>
             
             <div>

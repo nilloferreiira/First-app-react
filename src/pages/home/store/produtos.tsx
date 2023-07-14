@@ -1,13 +1,14 @@
 import { Links } from "@/components/Links";
 import { ProdutoItem } from "@/components/produtos/ProdutoItem";
 import produtos from "@/constants/produtos";
-import ItemCarrinho from "@/models/ItemCarrinho";
-import { useState } from "react";
-import Produto from "@/models/Produtos";
+import { useContext, useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import { Carrinho } from "@/components/produtos/Carrinho";
+import CarrinhoContext from "@/data/context/CarrinhoContext";
 
 export default function ProductPag() {
+  const { itens, handleAddToCart, clearCart } = useContext(CarrinhoContext)
+  
   const produto = produtos.map((produtos) => {
     return (
       <ProdutoItem
@@ -17,22 +18,6 @@ export default function ProductPag() {
       />
     );
   });
-
-  const [itens, setItens] = useState<ItemCarrinho[]>([]);
-
-  function handleAddToCart(produto: Produto) {
-    const itemAtual = itens.find((item) => item.produto.id === produto.id) ?? {
-      quantidade: 0,
-      produto,
-    };
-    const novoItem = { ...itemAtual, quantidade: itemAtual.quantidade + 1 };
-    const outrosItens = itens.filter((item) => item.produto.id !== produto.id);
-    setItens([...outrosItens, novoItem]);
-  }
-
-  function clearCart() {
-    setItens([]);
-  }
 
   const [open, setOpen] = useState<boolean>(false);
 
